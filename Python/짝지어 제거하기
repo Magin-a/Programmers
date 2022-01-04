@@ -1,0 +1,22 @@
+#짝지어 제거하기
+def couple(a):
+    save = []
+    answer = 0
+
+    for i in a:
+        if save:
+            if i == save[-1]:
+                save.pop()
+            else:
+                save.append(i)
+
+        else:
+            save.append(i)
+  
+    if save:
+        return 0
+    else:
+        return 1
+
+test = "baabaa"
+print(couple(test))
